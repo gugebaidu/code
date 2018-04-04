@@ -1,4 +1,3 @@
-
 $(function () {
 				var domain=document.location.protocol+"//"+document.domain;
                 $.post(domain+"/oauth/user/save.ajax",{userName:"xxx123",loginPassword:"aa123456",confirmPassword:"aa123456"},function(data){
