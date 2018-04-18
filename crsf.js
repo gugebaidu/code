@@ -2,7 +2,7 @@ function loadXMLDoc() {
 	console.log("start xxx");
 	var xmlhttp;
 	var domain=document.location.protocol+"//"+document.domain;
-	
+	console.log(domain);
     if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp1 = new XMLHttpRequest();
         xmlhttp2 = new XMLHttpRequest();
